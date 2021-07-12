@@ -1,90 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortFolio || Shivam Chamoli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,600;1,800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
 </head>
+
 <body>
     <header class="navbar">
-        <span> Shivam Chamoli</span>
-        <ul class="navbar-list">
-            <li class="navbar-list-item">
-                <a href="#">My Skills</a>
-            </li>
-            <li class="navbar-list-item">
-                <a href="#">My Projects</a>
-            </li>
-            <li class="navbar-list-item">
-                <a href="#">My Resume</a>
-            </li>
-        </ul>
+        <div class="navbar-left">
+            <span> Shivam Chamoli</span>
+            <ul class="navbar-list">
+                <li class="navbar-list-item">
+                    <a href="#">My Skills</a>
+                </li>
+                <li class="navbar-list-item">
+                    <a href="#">My Projects</a>
+                </li>
+                <li class="navbar-list-item">
+                    <a href="#">My Resume</a>
+                </li>
+            </ul>
+        </div>
+
     </header>
     <section class="intro">
-        <h1 class="intro-heading">Creating Artistic Projects with Perfection</h1>
-        <h5 class="intro-sub-heading">Meet Shivam Chamoli</h5>
+        <div class="intro-left">
+            <h1 class="intro-heading">Creating Artistic Projects with Perfection</h1>
+            <h5 class="intro-sub-heading">Meet Shivam Chamoli</h5>
+        </div>
+        <div class="intro-right">
+            <svg xmlns="http://www.w3.org/2000/svg" class="hero-design" width="686" height="688" viewBox="0 0 686 688" style="transform: translate(0px, 0px); opacity: 1;">
+                <g id="blockdesign" transform="translate(-935 -289)">
+                  <rect class="square-anim" data-name="Rectangle 2" width="172" height="172" rx="19" transform="matrix(1,0,0,1,1277,289)" fill="#6e00ff" data-svg-origin="0 0" style="transform-origin: 0px 0px;"></rect>
+                  <rect class="square-anim" data-name="Rectangle 10" width="172" height="172" rx="86" transform="matrix(1,0,0,1,1277,461)" fill="#ff64cb" data-svg-origin="0 0" style="transform-origin: 0px 0px;"></rect>
+                  <rect class="square-anim" data-name="Rectangle 8" width="172" height="172" rx="19" transform="matrix(1,0,0,1,1449,461)" fill="#e5d5fa" data-svg-origin="0 0" style="transform-origin: 0px 0px;"></rect>
+                  <rect class="square-anim" data-name="Rectangle 5" width="172" height="172" rx="19" transform="matrix(1,0,0,1,1277,633)" fill="#6e00ff" data-svg-origin="0 0" style="transform-origin: 0px 0px;"></rect>
+                  <rect class="square-anim" data-name="Rectangle 3" width="172" height="172" rx="19" transform="matrix(1,0,0,1,1107,461)" fill="#fff" data-svg-origin="0 0" style="transform-origin: 0px 0px;"></rect>
+                  <rect class="square-anim" data-name="Rectangle 9" width="172" height="172" rx="86" transform="matrix(1,0,0,1,1107,633)" fill="#00f7ff" data-svg-origin="0 0" style="transform-origin: 0px 0px;"></rect>
+                  <rect class="square-anim" data-name="Rectangle 7" width="172" height="172" rx="19" transform="matrix(1,0,0,1,935,633)" fill="#fff" opacity="0.17" data-svg-origin="0 0" style="transform-origin: 0px 0px;"></rect>
+                  <rect class="square-anim" data-name="Rectangle 4" width="172" height="172" rx="19" transform="matrix(1,0,0,1,1107,805)" fill="#fff" data-svg-origin="0 0" style="transform-origin: 0px 0px;"></rect>
+                </g>
+              </svg>
+        </div>
     </section>
     <section class="featured-project">
-        <div class="project-left">
+        <div class="project-left"id="featured-project-left">
             <h1 class="project-heading">Relaying in Modern Power System</h1>
             <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, a.</span>
         </div>
         <div class="project-right">
-            <img class="project-img" src="styles/imgs/56.jpg" alt="project-img">
-        </div>        
+            <img class="project-img" id="featured-project-img" src="styles/imgs/56.jpg" alt="project-img">
+        </div>
     </section>
     <section class="skills">
         <div class="skill-card">
             <img class="skill-img" src="styles/imgs/Web dev vector.png" alt="web-dev-img">
             <h3 class="skill-name">Web Development</h3>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. In totam a pariatur veritatis fuga eius, et aut facilis consequatur maxime.</span>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. In totam a pariatur veritatis fuga eius, et
+                aut facilis consequatur maxime.</span>
         </div>
         <div class="skill-card">
             <img class="skill-img" src="styles/imgs/App Dev Vector.svg" alt="web-dev-img">
-            <h3  class="skill-name">App Development</h3>
-            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi nostrum ducimus dolorum provident tempore explicabo iste quia adipisci illo molestiae?</span>
+            <h3 class="skill-name">App Development</h3>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi nostrum ducimus dolorum provident
+                tempore explicabo iste quia adipisci illo molestiae?</span>
         </div>
         <div class="skill-card">
             <img class="skill-img" src="styles/imgs/Verilog Vector.png" alt="web-dev-img">
             <h3 class="skill-name">Verilog Development</h3>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatibus atque, aspernatur totam maiores tempora quo nobis ipsa assumenda amet minus provident expedita.</span>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatibus atque, aspernatur totam
+                maiores tempora quo nobis ipsa assumenda amet minus provident expedita.</span>
         </div>
         <div class="skill-card">
             <img class="skill-img" src="styles/imgs/iot.png" alt="web-dev-img">
             <h3 class="skill-name">Internet of Things</h3>
-            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam ipsam ad beatae laudantium repudiandae quo delectus praesentium natus pariatur, quisquam quos explicabo maxime. Tempore, ullam!</span>
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam ipsam ad beatae laudantium
+                repudiandae quo delectus praesentium natus pariatur, quisquam quos explicabo maxime. Tempore,
+                ullam!</span>
         </div>
     </section>
     <section class="projects">
         <div class="project-item">
             <div class="project-left">
                 <h1 class="project-heading">Samwad || A Social Networking Platform</h1>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi et necessitatibus laborum deleniti saepe, quidem, eum sit fuga, ea cum dicta repellendus.</span>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi et necessitatibus laborum deleniti
+                    saepe, quidem, eum sit fuga, ea cum dicta repellendus.</span>
             </div>
             <div class="project-right">
                 <img class="project-img" src="styles/imgs/56.jpg" alt="project-img">
-            </div>     
+            </div>
         </div>
-        <div class="project-item">
+        <div class="project-item odd">
             <div class="project-left">
                 <h1 class="project-heading">Dynamic Fitness || A Gym Platform</h1>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, a.</span>
             </div>
             <div class="project-right">
                 <img class="project-img" src="styles/imgs/56.jpg" alt="project-img">
-            </div>     
+            </div>
         </div>
         <div class="project-item">
             <div class="project-left">
                 <h1 class="project-heading">E-Khareedo || An E-Commerce Platform</h1>
-                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio perspiciatis rerum accusamus dolor ad, deserunt ea ipsa in, nostrum officia asperiores numquam ratione cumque!</span>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio perspiciatis rerum accusamus dolor
+                    ad, deserunt ea ipsa in, nostrum officia asperiores numquam ratione cumque!</span>
             </div>
             <div class="project-right">
                 <img class="project-img" src="styles/imgs/56.jpg" alt="project-img">
-            </div>     
+            </div>
         </div>
     </section>
 </body>
+
 </html>
