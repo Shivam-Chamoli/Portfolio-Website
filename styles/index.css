@@ -35,30 +35,57 @@
 .intro-left {
   background-color: rgb(83, 83, 228);
   color: white;
-  height: 30vh;
   padding: 3rem;
   width: 100%;
 }
 .intro-right {
-  visibility: hidden;
+  display: none;
 }
 .intro-heading {
   font-size: 2rem;
   margin-bottom: 3vh;
   font-family: "Playfair Display", serif;
 }
+.intro-sub-heading {
+  color: rgb(160, 0, 0);
+}
+.scroll {
+  height: 50px;
+  margin-top: 4rem;
+}
+
 .featured-project {
   padding: 3rem;
+  position: relative;
+}
+#featured-project-pre {
+  color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.project-heading {
+  color: rgb(31, 31, 235);
 }
 .project-right {
   text-align: center;
 }
 .project-img {
   object-fit: contain;
-  width: 80%;
-  border-radius: 5%;
+  width: 100%;
+  border-radius: 10px;
   box-shadow: 0 0 1rem grey;
   margin-top: 1rem;
+}
+.featured-project::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #e5d5fa;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 .skills {
   background-color: hotpink;
@@ -72,8 +99,9 @@
   border-radius: 1rem;
 }
 .skill-img {
-  object-fit: contain;
+  object-fit: fill;
   width: 100%;
+  max-height: 200px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.801);
 }
@@ -88,8 +116,13 @@
 .project-item {
   margin-bottom: 2rem;
 }
+@media screen and (min-width: 600px) {
+  .intro-left {
+    text-align: center;
+  }
+}
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .navbar,
   .intro {
     display: flex;
@@ -111,9 +144,10 @@
   .intro-left {
     height: 95vh;
     padding: 4rem 6rem;
+    text-align: left;
   }
   .intro-right {
-    visibility: visible;
+    display: block;
   }
   .intro-heading {
     font-size: 3rem;
@@ -121,8 +155,7 @@
   }
   .intro-sub-heading {
     margin-top: 1rem;
-    font-size: 1rem;
-    color: crimson;
+    font-size: 1.2rem;
   }
   .intro-right svg {
     height: 300px;
@@ -140,31 +173,36 @@
     margin: 0 1rem;
   }
   .project-left {
-    margin-top: 3rem;
     margin-right: 5rem;
     width: 35%;
-  }
-  #featured-project-left {
     margin-top: 1rem;
+    text-align: justify;
+  }
+
+  #featured-project-left {
+    margin-bottom: 2rem;
+    margin-top: 0;
   }
   .project-img {
+    width: 400px;
+    height: 250px;
+    object-fit: fill;
+  }
+  #featured-project-img {
     width: 500px;
     height: 300px;
     object-fit: fill;
   }
-  #featured-project-img {
-    margin-top: -70px;
-  }
   .project-heading {
     font-size: 1.5rem;
-    color: rgb(31, 31, 235);
+    margin-top: 10px;
   }
   .skills {
     max-width: 100%;
     display: flex;
     justify-content: space-around;
-    margin-top: -4rem;
-    padding-top: 4rem;
+    margin-top: -6rem;
+    padding-top: 4.5rem;
     padding-bottom: 0;
     overflow-y: hidden;
   }
@@ -193,7 +231,23 @@
   .project-item h1 {
     margin: 1rem 0;
   }
-  .project-item span {
-    line-height: 1.8em;
+  .project-item span,
+  #featured-project-left span {
+    line-height: 1.6em;
+  }
+}
+
+.circle {
+  animation: circleAnim 1s infinite alternate-reverse;
+}
+
+@keyframes circleAnim {
+  from {
+    transform: translate(262px, 798px);
+    z-index: 2;
+  }
+  to {
+    transform: translate(262px, 830px);
+    z-index: 2;
   }
 }
