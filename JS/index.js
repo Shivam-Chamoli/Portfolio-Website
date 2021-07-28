@@ -81,3 +81,23 @@ gsap.from(".project-move-in-right", {
   duration: 1.5,
   stagger: 0.4,
 });
+gsap.from(".background-img-about-me", {
+  scrollTrigger: {
+    trigger: ".about-me",
+    start: "top bottom",
+  },
+  y: 100,
+  opacity: 0,
+  duration: 1.5,
+  stagger: 0.4,
+});
+gsap.from(".about-me-info", {
+  scrollTrigger: {
+    trigger: ".about-me-info",
+    start: "top bottom",
+  },
+  x: 100,
+  opacity: 0,
+  duration: 1.5,
+  stagger: 0.4,
+});

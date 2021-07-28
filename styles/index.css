@@ -76,6 +76,11 @@
   box-shadow: 0 0 1rem grey;
   margin-top: 1rem;
 }
+#notes-app-img {
+  max-height: 400px;
+  width: auto;
+  object-fit: contain;
+}
 .featured-project::before {
   content: "";
   position: absolute;
@@ -116,9 +121,38 @@
 .project-item {
   margin-bottom: 2rem;
 }
+.about-me {
+  background-color: #445d7b;
+  color: white;
+  line-height: 1.8;
+  font-family: "helvetica neue";
+  padding: 3rem 3rem 1rem 3rem;
+  display: block;
+  text-align: center;
+}
+.about-me-info {
+  padding: 10px;
+  text-align: justify;
+}
+
 @media screen and (min-width: 600px) {
   .intro-left {
     text-align: center;
+  }
+}
+@media screen and (min-width: 850px) {
+  .about-me {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .background-img-about-me {
+    flex: 1;
+    height: 300px;
+  }
+  .about-me-info {
+    flex: 1;
   }
 }
 
@@ -192,6 +226,14 @@
     width: 500px;
     height: 300px;
     object-fit: fill;
+  }
+  #notes-app-img {
+    width: fit-content;
+    object-fit: contain;
+    height: 500px;
+  }
+  #notes-app-right {
+    width: 400px;
   }
   .project-heading {
     font-size: 1.5rem;
