@@ -76,7 +76,8 @@
   box-shadow: 0 0 1rem grey;
   margin-top: 1rem;
 }
-#notes-app-img {
+#notes-app-img,
+#gym-app-img {
   max-height: 400px;
   width: auto;
   object-fit: contain;
@@ -217,6 +218,9 @@
     margin-bottom: 2rem;
     margin-top: 0;
   }
+  .project-right {
+    width: 400px;
+  }
   .project-img {
     width: 400px;
     height: 250px;
@@ -227,7 +231,8 @@
     height: 300px;
     object-fit: fill;
   }
-  #notes-app-img {
+  #notes-app-img,
+  #gym-app-img {
     width: fit-content;
     object-fit: contain;
     height: 500px;
