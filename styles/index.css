@@ -47,8 +47,10 @@
   font-family: "Playfair Display", serif;
 }
 .intro-sub-heading {
-  color: rgb(160, 0, 0);
+  color: #ff64cb;
+  text-decoration: solid;
 }
+
 .scroll {
   height: 50px;
   margin-top: 4rem;
@@ -71,13 +73,14 @@
 }
 .project-img {
   object-fit: contain;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: 400px;
   border-radius: 10px;
   box-shadow: 0 0 1rem grey;
   margin-top: 1rem;
 }
-#notes-app-img,
-#gym-app-img {
+.project-img-vertical {
   max-height: 400px;
   width: auto;
   object-fit: contain;
@@ -103,6 +106,9 @@
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 1rem;
+}
+.skill-card:hover {
+  transform: translate(scale(1.2));
 }
 .skill-img {
   object-fit: fill;
@@ -130,6 +136,7 @@
   padding: 3rem 3rem 1rem 3rem;
   display: block;
   text-align: center;
+  overflow-x: hidden;
 }
 .about-me-info {
   padding: 10px;
@@ -190,7 +197,7 @@
   }
   .intro-sub-heading {
     margin-top: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
   .intro-right svg {
     height: 300px;
@@ -202,10 +209,12 @@
   .featured-project,
   .project-item {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
   }
   .project-right {
     margin: 0 1rem;
+    flex: 1;
   }
   .project-left {
     margin-right: 5rem;
@@ -219,13 +228,16 @@
     margin-top: 0;
   }
   .project-right {
-    width: 400px;
+    max-width: 500px;
   }
   .project-img {
-    width: 400px;
-    height: 250px;
+    height: auto;
     object-fit: fill;
   }
+  /* .project-img:hover {
+    transform: translate(1.2rem);
+    transform: rotate3d(10deg, 15deg, 20deg);
+  } */
   #featured-project-img {
     width: 500px;
     height: 300px;
@@ -254,20 +266,21 @@
     overflow-y: hidden;
   }
   .skill-card {
-    width: 300px;
+    width: 400px;
     margin: 1rem 0 0 -10px;
     margin-bottom: -10px;
     padding: 1rem 1rem 2rem 1rem;
+    transform: scale(1);
   }
   .skill-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   .skill-img {
-    width: 250px;
-    height: 150px;
+    margin: auto;
+    height: 200px;
   }
   .projects {
-    padding: 3rem 0;
+    padding: 5rem 0;
   }
   .project-item {
     padding: 0 3rem;
@@ -296,5 +309,18 @@
   to {
     transform: translate(262px, 830px);
     z-index: 2;
+  }
+}
+.animMeetIcon {
+  animation: meetEnhancer 1s alternate infinite ease-in;
+  width: min-content;
+  display: inline-block;
+}
+@keyframes meetEnhancer {
+  from {
+    -webkit-transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.6);
   }
 }

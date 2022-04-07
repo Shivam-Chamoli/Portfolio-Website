@@ -1,3 +1,36 @@
+import data from "./data.js";
+console.log(data);
+let projectSection = document.getElementById("projects");
+console.log(projectSection);
+var innerHTMLOfProjectSection = "";
+data.map((data, i) => {
+  innerHTMLOfProjectSection = innerHTMLOfProjectSection.concat(`
+    <div class="project-item ${i % 2 == 1 ? "odd" : ""} ">
+      <div class="project-left ${
+        i % 2 == 0 ? "project-move-in-left" : "project-move-in-right"
+      }">
+          <h1 class="project-heading"> ${data.name} </h1>
+          <span> ${data.desc} <br>
+              <a style="color: blue;" href=${data.sourceCode}>Source Code</a>
+              &nbsp;
+              ${
+                data.projectLink == ""
+                  ? ""
+                  : `<a style="color: blue;" href=${data.projectLink}>Project link</a>`
+              }
+          </span>
+      </div>
+      <div class="project-right ${
+        i % 2 == 1 ? "project-move-in-left" : "project-move-in-right"
+      }">
+          <img class="project-img" src="${data.imgSrc}"} alt="project-img">
+      </div>
+    </div>`);
+  return;
+});
+
+projectSection.innerHTML = innerHTMLOfProjectSection;
+
 gsap.registerPlugin(ScrollTrigger);
 var tl = gsap.timeline();
 
