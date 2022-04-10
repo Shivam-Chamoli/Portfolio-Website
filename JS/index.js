@@ -11,13 +11,17 @@ data.map((data, i) => {
       }">
           <h1 class="project-heading"> ${data.name} </h1>
           <span> ${data.desc} <br>
-              <a style="color: blue;" href=${data.sourceCode}>Source Code</a>
-              &nbsp;
-              ${
-                data.projectLink == ""
-                  ? ""
-                  : `<a style="color: blue;" href=${data.projectLink}>Project link</a>`
-              }
+          ${
+            data.sourceCode == ""
+              ? ""
+              : `<a style="color: blue;" href=${data.sourceCode}>Source Code</a>`
+          }
+          &nbsp;
+          ${
+            data.projectLink == ""
+              ? ""
+              : `<a style="color: blue;" href=${data.projectLink}>Project link</a>`
+          }
           </span>
       </div>
       <div class="project-right ${
@@ -133,4 +137,17 @@ gsap.from(".about-me-info", {
   opacity: 0,
   duration: 1.5,
   stagger: 0.4,
+});
+
+const skills = Array.from(document.getElementsByClassName("skill-card"));
+
+skills.forEach(function (skill) {
+  skill.addEventListener("mouseover", function () {
+    this.style.transform = "scale(1.15)";
+    console.log("Inside");
+    const el = this;
+    setTimeout(function () {
+      el.style.transform = "scale(1.0)";
+    }, 500);
+  });
 });
